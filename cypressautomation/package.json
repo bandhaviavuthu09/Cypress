@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
     "chromeTest": "npm run test -- --browser chrome",
     "postchrome-test": "jrm ./results/combined-report.xml \"./results/results-*.xml\"",
     "script-chrome": "npm run chrome-test || npm run postchrome-test"
