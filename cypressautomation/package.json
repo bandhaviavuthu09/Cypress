@@ -3,10 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+<<<<<<< HEAD
   "scripts": 
   {
     "test": "node_modules\\.bin\\cypress run",
     "chromeTest": "npm run test -- --browser chrome",
+=======
+  "scripts": {
+    "test": "node_modules\\.bin\\cypress run",
+     "chromeTest": "npm run test -- --browser chrome",
+>>>>>>> b61b399b1d49142a84e3386cfc90a6ad517d64b7
     "postchrome-test": "jrm ./results/combined-report.xml \"./results/results-*.xml\"",
     "script-chrome": "npm run chrome-test || npm run postchrome-test"
   },
