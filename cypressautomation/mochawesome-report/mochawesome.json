@@ -2,23 +2,23 @@
   "stats": {
     "suites": 1,
     "tests": 2,
-    "passes": 0,
-    "pending": 1,
+    "passes": 1,
+    "pending": 0,
     "failures": 1,
-    "start": "2022-08-25T10:16:33.634Z",
-    "end": "2022-08-25T10:16:37.776Z",
-    "duration": 4142,
+    "start": "2022-08-30T10:21:16.146Z",
+    "end": "2022-08-30T10:21:21.106Z",
+    "duration": 4960,
     "testsRegistered": 2,
-    "passPercent": 0,
-    "pendingPercent": 50,
+    "passPercent": 50,
+    "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
-    "skipped": 1,
-    "hasSkipped": true
+    "skipped": 0,
+    "hasSkipped": false
   },
   "results": [
     {
-      "uuid": "4ecc8d6e-7c21-4891-a21b-306956ab13db",
+      "uuid": "ff8e7929-04be-48b1-b0e3-590e96d2fe00",
       "title": "",
       "fullFile": "cypress\\integration\\examples\\BDD\\ecommerce.feature",
       "file": "cypress\\integration\\examples\\BDD\\ecommerce.feature",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "700b42df-70d5-43e8-aeb2-101045ee64c8",
+          "uuid": "8a57435d-7f6e-40b3-8379-8bb27cd38524",
           "title": "End to end Ecommerce validation",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Ecommerce products delivery",
               "fullTitle": "End to end Ecommerce validation Ecommerce products delivery",
               "timedOut": null,
-              "duration": 1818,
+              "duration": 1972,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -51,8 +51,8 @@
                 "estack": "CypressError: Oops, it looks like you are trying to call a child command before running a parent command.\n\nYou wrote code that looks like this:\n\n``cy.select(\"Blackberry\")``\n\nA child command must be chained after a parent because it operates on a previous subject.\n\nFor example - if we were issuing the child command `click`...\n\ncy\n  .get('button') // parent command must come first\n  .click()       // then child command comes second\n    at $Cy.validateFirstCall (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:167833:68)\n    at wrapped (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:167337:14)\nFrom Your Spec Code:\n    at eval (https://rahulshettyacademy.com/__cypress/tests?p=cypress\\integration\\examples\\BDD\\ecommerce.feature:68:8)\n    at Context.eval (https://rahulshettyacademy.com/__cypress/tests?p=cypress\\integration\\examples\\BDD\\ecommerce.feature:67:25)\n    at Context.resolveAndRunStepDefinition (https://rahulshettyacademy.com/__cypress/tests?p=cypress\\integration\\examples\\BDD\\ecommerce.feature:10644:29)\n    at Context.eval (https://rahulshettyacademy.com/__cypress/tests?p=cypress\\integration\\examples\\BDD\\ecommerce.feature:9965:35)",
                 "diff": null
               },
-              "uuid": "d68abe04-b139-4a0c-b3cc-4d9be4053247",
-              "parentUUID": "700b42df-70d5-43e8-aeb2-101045ee64c8",
+              "uuid": "5fc292dc-dd7b-48da-aede-0ac30e250ebd",
+              "parentUUID": "8a57435d-7f6e-40b3-8379-8bb27cd38524",
               "isHook": false,
               "skipped": false
             },
@@ -60,31 +60,31 @@
               "title": "Filling the form to shop",
               "fullTitle": "End to end Ecommerce validation Filling the form to shop",
               "timedOut": null,
-              "duration": 22,
-              "state": "pending",
-              "speed": null,
-              "pass": false,
+              "duration": 822,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "// register this scenario with the cucumber data collector\n// but don't run it\n// Tell mocha this is a skipped test so it also shows correctly in Cypress\nconst state = window.testState;\ncy.then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() => state.onFinishScenario(scenario))\n  // eslint-disable-next-line func-names\n  .then(function () {\n    return this.skip();\n  });",
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
               "err": {},
-              "uuid": "a197171c-f518-4a6c-93e8-77adf0371464",
-              "parentUUID": "700b42df-70d5-43e8-aeb2-101045ee64c8",
+              "uuid": "f48e559a-55fd-49ae-b5dd-6222cdd00400",
+              "parentUUID": "8a57435d-7f6e-40b3-8379-8bb27cd38524",
               "isHook": false,
-              "skipped": true
+              "skipped": false
             }
           ],
           "suites": [],
-          "passes": [],
+          "passes": [
+            "f48e559a-55fd-49ae-b5dd-6222cdd00400"
+          ],
           "failures": [
-            "d68abe04-b139-4a0c-b3cc-4d9be4053247"
+            "5fc292dc-dd7b-48da-aede-0ac30e250ebd"
           ],
           "pending": [],
-          "skipped": [
-            "a197171c-f518-4a6c-93e8-77adf0371464"
-          ],
-          "duration": 1840,
+          "skipped": [],
+          "duration": 2794,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

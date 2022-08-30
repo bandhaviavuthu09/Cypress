@@ -3,12 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
+  "scripts": 
+  {
+    "test": "node_modules\\.bin\\cypress run",
     "chromeTest": "npm run test -- --browser chrome",
     "postchrome-test": "jrm ./results/combined-report.xml \"./results/results-*.xml\"",
     "script-chrome": "npm run chrome-test || npm run postchrome-test"
   },
-  "cypress-cucumber-preprocessor": {
+  "cypress-cucumber-preprocessor": { 
     "nonGlobalStepDefinitions": true
   },
   "author": "",
