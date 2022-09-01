@@ -6,7 +6,8 @@
   "scripts": {
     "test": "node_modules\\.bin\\cypress run",
     "chromeTest": "npm run test -- --browser chrome",
-    "script-chrome": "npm run chrome-test"
+    "postchrome-test": "jrm ./results/combined-report.xml \"./results/results-*.xml\"",
+    "script-chrome": "npm run chrome-test || npm run postchrome-test"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true
